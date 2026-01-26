@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shourya Upadhyay - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #C9A227;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #C9A227;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #C9A227;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, #C9A227, #e0b12e);
+            color: #1a1a1a;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(201, 162, 39, 0.5);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 8rem 8% 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.15), transparent);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        .hero-text h3 {
+            color: #C9A227;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #C9A227);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #b0b0b0;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #C9A227, #e0b12e);
+            color: #1a1a1a;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(201, 162, 39, 0.5);
+        }
+
+        .btn-secondary {
+            border: 2px solid #C9A227;
+            color: #C9A227;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(201, 162, 39, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-circle {
+            width: 450px;
+            height: 450px;
+            background: linear-gradient(135deg, rgba(61, 255, 200, 0.3), rgba(61, 255, 200, 0.1));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .profile-inner {
+            width: 380px;
+            height: 380px;
+            background: #0A2540;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8rem;
+            color: #C9A227;
+            font-weight: 700;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-icon {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            border: 3px solid #C9A227;
+            animation: orbit 20s linear infinite;
+        }
+
+        .skill-icon:nth-child(2) { top: 10%; left: 15%; animation-delay: 0s; }
+        .skill-icon:nth-child(3) { top: 15%; right: 10%; animation-delay: -5s; }
+        .skill-icon:nth-child(4) { bottom: 15%; left: 5%; animation-delay: -10s; }
+        .skill-icon:nth-child(5) { bottom: 10%; right: 15%; animation-delay: -15s; }
+
+        @keyframes orbit {
+            0%, 100% { transform: translateY(0) scale(1); }
+            25% { transform: translateY(-15px) scale(1.1); }
+            50% { transform: translateY(0) scale(1); }
+            75% { transform: translateY(15px) scale(0.9); }
+        }
+
+        section {
+            padding: 6rem 8%;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #C9A227, #e0b12e);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            background: rgba(42, 42, 42, 0.5);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            color: #c0c0c0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: rgba(42, 42, 42, 0.5);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(201, 162, 39, 0.2);
+            border-color: #C9A227;
+        }
+
+        .skill-card h3 {
+            color: #C9A227;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 0.6rem 0;
+            color: #b0b0b0;
+            font-size: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #C9A227;
+            font-size: 1.2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: rgba(42, 42, 42, 0.5);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #C9A227, #e0b12e);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(201, 162, 39, 0.2);
+            border-color: #C9A227;
+        }
+
+        .project-card h3 {
+            color: #C9A227;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .project-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-link {
+            color: #C9A227;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .project-link:hover {
+            gap: 1rem;
+        }
+
+        .testimonials {
+            background: rgba(10, 37, 64, 0.3);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(42, 42, 42, 0.5);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: #C9A227;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #c0c0c0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, rgba(10, 37, 64, 0.5), rgba(26, 26, 26, 0.8));
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: rgba(42, 42, 42, 0.5);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            border-color: #C9A227;
+        }
+
+        .contact-item h4 {
+            color: #C9A227;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #C9A227;
+        }
+
+        .cta {
+            margin-top: 3rem;
+            padding: 3rem;
+            background: rgba(201, 162, 39, 0.1);
+            border-radius: 20px;
+            border: 2px solid #C9A227;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .cta p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: #0f0f0f;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid rgba(201, 162, 39, 0.2);
+        }
+
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 6rem 5% 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-circle {
+                width: 350px;
+                height: 350px;
+            }
+
+            .profile-inner {
+                width: 300px;
+                height: 300px;
+                font-size: 6rem;
+            }
+
+            .skills-grid, .projects-grid, .testimonial-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">SU</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="contact-btn">Contact Me</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h3>— Introducing</h3>
+            <h1>Turning Ideas into Code, Stories, and Engaging Visuals</h1>
+            <p>I am a multi-skilled freelancer specializing in programming, video editing, and creative storytelling. I help individuals and brands build reliable solutions and engaging content with clarity and precision.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Let's Work Together</a>
+                <a href="#projects" class="btn-secondary">View Projects</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-circle">
+                <div class="profile-inner">S</div>
+                <div class="skill-icon">🐍</div>
+                <div class="skill-icon">💻</div>
+                <div class="skill-icon">🎬</div>
+                <div class="skill-icon">✍️</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>Hello! I'm <strong style="color: #C9A227;">Shourya Upadhyay</strong>, a college student and passionate freelancer combining technical precision with creative storytelling. I have completed comprehensive courses in Python and C programming, actively applying these skills through hands-on projects and problem-solving practice.</p>
+            <p>Beyond programming, I am a video editor using CapCut and a YouTube content creator with 800+ subscribers, where I focus on storytelling, pacing, and audience engagement. My interests in space science, philosophy, and analytical thinking shape how I approach both creative and technical challenges.</p>
+            <p>As a freelancer, I value professionalism, clear communication, and timely delivery. Whether building software solutions or crafting compelling visual narratives, I bring consistency, creativity, and dedication to every project.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python (automation, scripting, logic building)</li>
+                    <li>C Programming (core concepts, structured programming)</li>
+                    <li>Problem solving & algorithmic thinking</li>
+                    <li>Clean, readable code practices</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Creative</h3>
+                <ul>
+                    <li>Video Editing (CapCut)</li>
+                    <li>YouTube long-form & short-form content</li>
+                    <li>Script & story writing</li>
+                    <li>Visual storytelling & pacing</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Professional Strengths</h3>
+                <ul>
+                    <li>Critical & analytical thinking</li>
+                    <li>Consistency & reliability</li>
+                    <li>Clear communication</li>
+                    <li>Time management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🐍 Python Projects</h3>
+                <p>Logic-focused Python programs and automation scripts emphasizing clean, readable code. Includes practical applications and problem-solving implementations.</p>
+                <a href="https://github.com/shouryaupadhyay2029/mypython-" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+            <div class="project-card">
+                <h3>💻 C Programming Projects</h3>
+                <p>Structured C programs demonstrating strong fundamentals, memory concepts, and syntax control. Built with attention to efficiency and clarity.</p>
+                <a href="https://github.com/shouryaupadhyay2029/C-Lang" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+            <div class="project-card">
+                <h3>🔧 SIH Prototype Practice</h3>
+                <p>Prototype-level development and structured problem-solving practice. Focused on building innovative solutions for real-world challenges.</p>
+                <a href="https://github.com/shouryaupadhyay2029/sihprototypepractise" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+            <div class="project-card">
+                <h3>🎬 YouTube Channel</h3>
+                <p>Content creation and editing with a focus on storytelling and viewer engagement. 800+ subscribers and growing with consistent quality content.</p>
+                <a href="https://youtube.com/@protagonist7777" target="_blank" class="project-link">Watch Content →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>A disciplined learner with strong logic and creative thinking. Demonstrates exceptional commitment to quality and continuous improvement.</p>
+            </div>
+            <div class="testimonial-card">
+                <p>Consistent, thoughtful, and highly focused on improving quality. Brings both technical expertise and creative vision to every project.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <a href="mailto:upadhyayshourya352@gmail.com">upadhyayshourya352@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>📱 Phone</h4>
+                    <a href="tel:+919525557831">+91 9525557831</a>
+                </div>
+                <div class="contact-item">
+                    <h4>💻 GitHub</h4>
+                    <a href="https://github.com/shouryaupadhyay2029" target="_blank">@shouryaupadhyay2029</a>
+                </div>
+                <div class="contact-item">
+                    <h4>🎥 YouTube</h4>
+                    <a href="https://youtube.com/@protagonist7777" target="_blank">@protagonist7777</a>
+                </div>
+            </div>
+            <div class="cta">
+                <h2>Looking for a reliable freelancer with both technical logic and creative vision?</h2>
+                <p>Let's build something meaningful together.</p>
+                <a href="mailto:upadhyayshourya352@gmail.com" class="btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Shourya Upadhyay. All rights reserved. Built with passion and precision.</p>
+    </footer>
+</body>
+</html>

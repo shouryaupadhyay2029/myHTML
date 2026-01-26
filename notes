@@ -1,0 +1,150 @@
+CLIENT-SERVER COMMUNICATION
+  -> THE BROWSER WE USE TO MAKE A REQUEST IS CALLED CLIENT AND THE POINT FROM WHERE 
+    WE GET RESPONSE IS SERVER
+  ->  eg:  doctor is server and patient is client
+  ->  server only provides specific type of services
+  ->  steps:
+      1 client finds need of a server\
+      2 client finds a relevant server
+      3 client gets close to server to create COMMUNICATION channel
+      4 client makes REQUEST
+      5 server procsses the REQUEST
+      6 server responds to client
+
+INTERNET AND IP
+  -> network is interconnection of computers
+  -> internet is a global network to which all computer inworld can be conncected
+  -> every device connected to the internet has a unique ip adress due to which no website gets mixed up
+  -> DNS(DOMAIN NAME SERVERQ) maintains the table that maps the website nameto their respective ip adress pf their corresponding computer
+  -> so refined COMMUNICATION between client and server is:
+     1) client finds the need of SERVER
+     2 client finds a relevant server by dns lookup which provides ip adress of browser 
+       then connects to the corresponding server 
+     3)client then sends the request to web server called http request and
+    server responds called http responds
+
+ html,head,p,h1,body are types of tags
+
+<a href="search.html" target"_blank">click here</a> 
+  -> target="_blank" opens the link in new tab
+
+  html tags
+   1 heading html tags
+      -> there are 6 heading tags from h1 to h6
+      -> h1 is the largest heading tag and h6 is the smallest heading tag
+    2 paragraph tag
+      -> <p> </p> is used to define a paragraph in html
+    3 horizontal line tag
+      -> <hr/> is used to add a horizontal line in webpage
+    4 anchor tag
+      -> <a> </a> is used to create a link in webpage
+      -> href attribute is used to specify the link address in anchor tag
+    5 bold tag
+      -> <b> </b> is used to make the text bold
+    6 italic tag
+      -> <i> </i> is used to make the text italic
+    7 underline tag
+      -> <u> </u> is used to underline the text   
+    8 line break tag
+      -> <br/> is used to add a line break in webpage
+    9 title tag
+      -> <title> </title> is used to define the title of the webpage which appears
+          in the browser tab
+    10 image tag
+      -> <img/> is used to add an image in webpage    
+    11 list tags
+      -> ordered list <ol> </ol> is used to create a numbered list
+      -> unordered list <ul> </ul> is used to create a bulleted list
+      -> list item <li> </li> is used to define a list item in both ordered and unordered list
+      -><ol type"a"> defines an ordered list with alphabetic markers
+      -><ol type"i"> defines an ordered list with roman numeral markers
+    12 division tag
+      -> <div> </div> is used to define a division or a section in a webpage
+
+
+      EXAMPLE OF HTML CODE:
+<!DOCTYPE html> 
+<html>
+    <head> 
+        <title> this is my first page title</title>
+
+    </head>
+    <body>
+        <h1>multiversal war</h1>
+        <p> para 1</p>
+        <hr/>  #adds a horizontal line in web page
+        <a href="https://www.google.com"> google</a>
+    </body>
+</html>
+  -> DOCTYPE html defines the document type and version of html
+  -> html tag is the root element of an html page
+  -> head tag contains meta information about the document
+  -> body tag contains the content of the document such as text, images, links, etc.
+
+tr stands for table row
+td stands for table data
+th stands for table header
+border attribute in table tag is used to define the border width of the table
+
+EXAMPLE OF TABLE IN HTML:
+<table border="1">  border is 0 by default
+    <tr> 
+       <th>student</th>
+       <th>marks</th>
+       <th>sports</th>
+    </tr>
+    <tr>
+       <td>harsh</td>
+       <td>84</td>
+       <td>50</td>
+    </tr>
+    <tr>
+       <td>keshave</td>
+       <td>94</td>
+       <td>20</td>
+    </tr>
+
+cell spacing attribute in table tag is used to define the space between the cells
+cell padding attribute in table tag is used to define the space between the cell content and cell border
+
+EXAMPLE OF TABLE IN HTML WITH CELL SPACING AND CELL PADDING:
+<table border="1" cellspacing="5" cellpadding="10">
+    <tr> 
+       <th>student</th>
+       <th>marks</th>
+       <th>sports</th>
+    </tr>
+    <tr>
+       <td>harsh</td>
+       <td>84</td>
+       <td>50</td>
+    </tr>
+    <tr>
+       <td>keshave</td>
+       <td>94</td>
+       <td>20</td>
+    </tr>
+
+
+    form tag is used to create a form in html
+input tag is used to create input fields in a form
+type attribute in input tag is used to define the type of input field
+<form>
+    <input type="text" name="username" placeholder="Enter your name"/>
+    <input type="password" name="password" placeholder="Enter your password"/> <br/>  
+
+    radios and checkboxes can be added using input tag with type attribute as radio and checkbox respectively
+    <input type="radio
+
+    select tag is used to create a dropdown list in a form
+    option tag is used to define the options in a dropdown list 
+    <select name="city">
+        <option value="delhi"> delhi</option>
+        <option value="mumbai"> mumbai </option>
+        <option value="bihar"> bihar</option>
+        <option value="gujrat"> gujrat</option>
+    </select> <br/>
+
+    <type="submit"/> is used to create a submit button in a form
+    <type="reset"/> is used to create a reset button in a form
+
