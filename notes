@@ -148,3 +148,32 @@ type attribute in input tag is used to define the type of input field
     <type="submit"/> is used to create a submit button in a form
     <type="reset"/> is used to create a reset button in a form
 
+CSS
+
+style tag is used to define the css in html document itself
+correct indentation of css code is important for better readability
+EXAMPLE OF CSS IN HTML:
+<style>
+  body {
+    background-color: lightblue;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+</style>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+
+external style sheeqt is used to define css in a separate file with .css extension
+link tag is used to link the external stylesheet to the html document
+for this we must link the css file in head section of html document
+EXAMPLE OF EXTERNAL STYLESHEET IN HTML:
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
