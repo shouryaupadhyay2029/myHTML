@@ -177,3 +177,27 @@ for this we must link the css file in head section of html document
 EXAMPLE OF EXTERNAL STYLESHEET IN HTML:
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+force refresh of webpage can be done using ctrl+f5
+
+idselector is used to define a unique style for a single element
+
+EXAMPLE OF ID IN CSS:
+
+<p id="header">This is a header paragraph.</p> 
+#header {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}   
+
+class selector is used to define a style for multiple elements  
+EXAMPLE OF CLASS IN CSS:
+<p class="text">This is a paragraph.</p>
+<p class="text">This is another paragraph.</p>  
+.text {
+  font-family: Arial;
+  font-size: 14px;
+  color: green;
+}
