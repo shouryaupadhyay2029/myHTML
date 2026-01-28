@@ -201,3 +201,19 @@ EXAMPLE OF CLASS IN CSS:
   font-size: 14px;
   color: green;
 }
+
+
+rgb value is used to define color in css using red, green and blue components
+eg: rgb(255,0,0) is red color
+
+rgba value is used to define color in css using red, green, blue components and alpha for opacity
+eg: rgba(255,0,0,0.5) is red color with 50% opacity 
+ 
+hexadecimal value is used to define color in css using hex code
+eg: #FF0000 is red color  
+
+line height property in css is used to define the space between lines of text
+eg: line-height: 1.5;
+
+margin property in css is used to define the space outside the element border
+eg: margin: 10px;
