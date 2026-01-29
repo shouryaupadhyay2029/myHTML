@@ -217,3 +217,43 @@ eg: line-height: 1.5;
 
 margin property in css is used to define the space outside the element border
 eg: margin: 10px;
+
+box model in css consists of content, padding, border and margin
+  -> content is the actual content of the element
+  -> padding is the space between content and border
+  -> border is the border of the element
+  -> margin is the space outside the border
+
+box sizing property in css is used to define how the width and height of an element are calculated
+  -> content-box is default value where width and height include only content
+  -> border-box where width and height include content, padding and border
+EXAMPLE OF BOX SIZING IN CSS:
+  .box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 5px solid black;
+  }
+
+display property in css is used to define how an element is displayed
+  -> block displays the element as a block element
+  -> inline displays the element as an inline element
+  -> none hides the element
+EXAMPLE OF DISPLAY IN CSS:
+  .block-element {
+    display: block;
+  }
+
+position property in css is used to define the position of an element
+  -> static is default value where element is positioned according to normal flow
+  -> relative positions the element relative to its normal position
+  -> absolute positions the element relative to its nearest positioned ancestor
+  -> fixed positions the element relative to the browser window
+
+
+width: fit-content; in css is used to make the width of an element adjust to fit its content
+we can use it to make sure the border of an element wraps tightly around its content
+
+z-index property in css is used to define the stack order of elements
+  -> elements with higher z-index are displayed in front of elements with lower z-index
