@@ -257,3 +257,23 @@ we can use it to make sure the border of an element wraps tightly around its con
 
 z-index property in css is used to define the stack order of elements
   -> elements with higher z-index are displayed in front of elements with lower z-index
+
+
+display inline-block; in css is used to display an element as an inline-level block container
+  -> it allows to set width and height of the element while still flowing inline with other elements
+EXAMPLE OF INLINE-BLOCK IN CSS:
+  .inline-block-element { 
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    background-color: lightgreen;
+  }
+
+display flex; in css is used to create a flexible layout for a container
+  -> it allows to align and distribute space among items in the container
+EXAMPLE OF FLEX IN CSS:
+  .flex-container {   
+    display: flex;
+    justify-content: center;  /* centers items horizontally */
+    align-items: center;      /* centers items vertically */
+  }
