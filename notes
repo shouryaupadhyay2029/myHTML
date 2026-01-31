@@ -277,3 +277,69 @@ EXAMPLE OF FLEX IN CSS:
     justify-content: center;  /* centers items horizontally */
     align-items: center;      /* centers items vertically */
   }
+  types of justify-content:
+    -> flex-start
+    -> flex-end
+    -> center
+    -> space-between
+    -> space-around
+    
+
+float property in css is used to position an element to the left or right of its container
+  -> left floats the element to the left
+  -> right floats the element to the right
+  -> none removes the float from the element
+EXAMPLE OF FLOAT IN CSS:
+  .float-left {   
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+  } 
+
+flex-basis property in css is used to define the initial size of a flex item before it is distributed in the flex container
+  -> it can be set to auto, a specific length or a percentage
+  ->parent width and height properties are ignored when flex-basis is set
+EXAMPLE OF FLEX-BASIS IN CSS:
+  .flex-item {   
+    flex-basis: 200px;
+  }
+
+flex-grow property in css is used to define how much a flex item can grow relative to other flex items in the flex container
+  -> it is a unitless value that specifies the growth factor of the item
+
+flex-shrink property in css is used to define how much a flex item can shrink relative to other flex items in the flex container
+  -> it is a unitless value that specifies the shrink factor of the item
+EXAMPLE OF FLEX-GROW AND FLEX-SHRINK IN CSS:
+  .flex-item {   
+    flex-grow: 1;   /* item can grow to fill available space */
+    flex-shrink: 1; /* item can shrink if necessary */
+  }
+
+flex-wrap property in css is used to define whether flex items should wrap onto multiple lines in the flex container
+  -> nowrap is default value where items are displayed in a single line
+  -> wrap allows items to wrap onto multiple lines
+  -> wrap-reverse allows items to wrap onto multiple lines in reverse order
+
+flex shorthand property in css is used to set the flex-grow, flex-shrink and flex-basis properties in a single declaration
+  -> it is a shorthand for setting all three properties at once 
+EXAMPLE OF FLEX SHORTHAND IN CSS:
+  .flex-item {   
+    flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+  }
+
+justify-content: space-evenly; in css is used to distribute flex items evenly in the flex container
+  -> it adds equal space between and around the items
+
+
+media queries in css are used to apply different styles to a webpage based on the device or screen size
+  -> it allows to create responsive designs that adapt to different screen sizes
+EXAMPLE OF MEDIA QUERIES IN CSS:
+  @media (max-width: 600px) {   
+    body {
+      background-color: lightgray;
+    }
+  }
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/> in html is used to control the layout on mobile browsers
+  -> it sets the width of the viewport to the width of the device and sets the initial zoom level to 1.0
+

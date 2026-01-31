@@ -1,0 +1,23 @@
+.container {
+    border: solid 1px #000;
+}
+.container>div {
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+}
+.one {
+    float: left;
+    border: solid 2px red;
+   
+}
+.two {
+    float: right;
+    border: solid 2px blue;
+     
+}
+.three {
+    float: left;
+    border: solid 2px white;
+     
+}

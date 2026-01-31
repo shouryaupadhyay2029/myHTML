@@ -1,0 +1,10 @@
+.box {
+    border: dotted 2px #333;
+    width: 500px;
+    display: flex;
+    
+}
+.box>div {
+    border: solid 2px #666;
+    border-radius: 5px;
+}
