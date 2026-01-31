@@ -340,6 +340,8 @@ EXAMPLE OF MEDIA QUERIES IN CSS:
       background-color: lightgray;
     }
   }
+
+  
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/> in html is used to control the layout on mobile browsers
   -> it sets the width of the viewport to the width of the device and sets the initial zoom level to 1.0
 
