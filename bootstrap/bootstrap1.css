@@ -1,7 +1,12 @@
 .row{
     border: solidq 1px red;
     margin-top: 50px;
+    height: 100px;
 }
 [class*="col-"],.col{
     border: solid 1px blue;
 }   
+col-3 align-self-center{
+    background-color: yellow;
+    align-self: center;
+}

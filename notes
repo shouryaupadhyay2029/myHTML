@@ -345,3 +345,20 @@ EXAMPLE OF MEDIA QUERIES IN CSS:
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/> in html is used to control the layout on mobile browsers
   -> it sets the width of the viewport to the width of the device and sets the initial zoom level to 1.0
 
+align-self property in css is used to override the align-items property for a specific flex item
+  -> it allows to align the item differently than the other items in the flex container
+EXAMPLE OF ALIGN-SELF IN CSS:
+  .flex-item {   
+    align-self: center; /* centers the item vertically */
+  }
+
+justif-content property in css is used to align flex items along the main axis of the flex container
+  -> it defines how the items are distributed in the container
+  -> it works only when display:flex; is applied to the parent container
+  -> types of justify-content:
+    -> flex-start
+    -> flex-end
+    -> center
+    -> space-between
+    -> space-around
+    -> space-evenly
