@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Players Stats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/cricinfo.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" >Cricket Stats</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#players">Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stats">Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section" id="home">
+        <div class="container">
+            <h1>Welcome to Cricket Players Stats</h1>
+            <p>Find your favorite cricket players and their statistics</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" class="form-control form-control-lg" placeholder="Search for players..." id="searchInput">
+        </div>
+    </div>
+
+    <div class="container" id="stats">
+        <h2 class="text-center mb-4">Overall Statistics</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="stats-box">
+                    <h3>500+</h3>
+                    <p>Players</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stats-box">
+                    <h3>20</h3>
+                    <p>Countries</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stats-box">
+                    <h3>1000+</h3>
+                    <p>Matches</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="stats-box">
+                    <h3>24/7</h3>
+                    <p>Updates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="players">
+        <h2 class="text-center mb-4">Top Players</h2>
+        <div class="row">
+ 
+            <div class="col-md-4">
+                <div class="card player-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Virat Kohli</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> India</p>
+                        <p><strong>Role:</strong> Batsman</p>
+                        <p><strong>Runs:</strong> 26,000+</p>
+                        <p><strong>Average:</strong> 54.5</p>
+                        <p><strong>Centuries:</strong> 80</p>
+                        <button class="btn btn-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card player-card">
+                    <div class="card-header bg-success text-white">
+                        <h5>Steve Smith</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> Australia</p>
+                        <p><strong>Role:</strong> Batsman</p>
+                        <p><strong>Runs:</strong> 9,600+</p>
+                        <p><strong>Average:</strong> 61.8</p>
+                        <p><strong>Centuries:</strong> 32</p>
+                        <button class="btn btn-success btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card player-card">
+                    <div class="card-header bg-warning text-dark">
+                        <h5>Jasprit Bumrah</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> India</p>
+                        <p><strong>Role:</strong> Bowler</p>
+                        <p><strong>Wickets:</strong> 400+</p>
+                        <p><strong>Average:</strong> 22.5</p>
+                        <p><strong>Economy:</strong> 4.5</p>
+                        <button class="btn btn-warning btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card player-card">
+                    <div class="card-header bg-danger text-white">
+                        <h5>Ben Stokes</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> England</p>
+                        <p><strong>Role:</strong> All-Rounder</p>
+                        <p><strong>Runs:</strong> 6,300+</p>
+                        <p><strong>Average:</strong> 35.9</p>
+                        <p><strong>Wickets:</strong> 200+</p>
+                        <button class="btn btn-danger btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card player-card">
+                    <div class="card-header bg-info text-white">
+                        <h5>Kane Williamson</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> New Zealand</p>
+                        <p><strong>Role:</strong> Batsman</p>
+                        <p><strong>Runs:</strong> 8,700+</p>
+                        <p><strong>Average:</strong> 54.3</p>
+                        <p><strong>Centuries:</strong> 32</p>
+                        <button class="btn btn-info btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card player-card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Babar Azam</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> Pakistan</p>
+                        <p><strong>Role:</strong> Batsman</p>
+                        <p><strong>Runs:</strong> 5,400+</p>
+                        <p><strong>Average:</strong> 45.2</p>
+                        <p><strong>Centuries:</strong> 19</p>
+                        <button class="btn btn-secondary btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <small>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Sign Up</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <small>Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cricket Stats. All rights reserved.</p>
+        </div>
+    </footer>
+
+  
+</body>
+</html>

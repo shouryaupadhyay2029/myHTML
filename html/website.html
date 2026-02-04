@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/website.css" />
+  <title>Cricketer Stats</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Cricketer Stats</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#playersSection">Players</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / INTRO -->
+  <section id="hero" class="hero-section text-center d-flex align-items-center animate">
+    <div class="container">
+      <h1 class="display-5 hero-title">Explore Cricketers — live from Wikipedia</h1>
+      <p class="lead hero-sub">Search a player and import their key stats from Wikipedia's infobox.</p>
+      <div class="mt-3">
+        <input id="heroSearch" class="form-control d-inline-block w-50 me-2" placeholder="e.g. Virat Kohli">
+        <button id="heroFetch" class="btn btn-primary">Fetch from Wikipedia</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container my-4">
+    <!-- Top summary (no change) -->
+    <div class="row gx-3 gy-3 mb-3">
+      <!-- left: stat cards -->
+      <!-- right: filters -->
+    </div>
+
+    <!-- Main content: list + detail -->
+    <div id="playersSection" class="row">
+      <div class="col-lg-7 mb-3">
+        <div class="card">
+          <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Player</th>
+                  <th>Team</th>
+                  <th>Role</th>
+                  <th class="text-end">Matches</th>
+                  <th class="text-end">Runs</th>
+                  <th class="text-end">Wkts</th>
+                </tr>
+              </thead>
+              <tbody id="playersTable">
+                <!-- keep your sample rows here -->
+                <tr class="player-row" data-name="Virat Kohli" data-team="India" data-role="Batsman" data-matches="254" data-runs="12040" data-wkts="4">
+                  <td>Virat Kohli</td><td>India</td><td>Batsman</td><td class="text-end">254</td><td class="text-end">12040</td><td class="text-end">4</td>
+                </tr>
+                <tr class="player-row" data-name="James Anderson" data-team="England" data-role="Bowler" data-matches="179" data-runs="350" data-wkts="640">
+                  <td>James Anderson</td><td>England</td><td>Bowler</td><td class="text-end">179</td><td class="text-end">350</td><td class="text-end">640</td>
+                </tr>
+                <tr class="player-row" data-name="Shane Watson" data-team="Australia" data-role="Allrounder" data-matches="190" data-runs="5400" data-wkts="185">
+                  <td>Shane Watson</td><td>Australia</td><td>Allrounder</td><td class="text-end">190</td><td class="text-end">5400</td><td class="text-end">185</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card h-100">
+          <div class="card-body" id="playerDetail">
+            <h5 class="card-title">Select a player or fetch from Wikipedia</h5>
+            <p class="text-muted">Search or click a row to view details here.</p>
+
+            <!-- Wikipedia quick-import -->
+            <div class="mb-3">
+              <input id="wikiInput" class="form-control mb-2" placeholder="Player name (Wikipedia)">
+              <div class="d-flex gap-2">
+                <button id="wikiFetchBtn" class="btn btn-outline-primary btn-sm">Fetch</button>
+                <button id="addRowBtn" class="btn btn-success btn-sm" disabled>Add to table</button>
+                <div id="wikiStatus" class="ms-auto text-muted small"></div>
+              </div>
+            </div>
+
+            <div id="wikiResult"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="mt-5 animate">
+      <h3>About</h3>
+      <p class="text-muted">A demo that uses the Wikipedia API to pull summary and infobox data. Works as a heuristic import — structure varies by page.</p>
+    </section>
+  </main>
+
+  <script src="../js/website.js"></script>
+</body>
+</html>

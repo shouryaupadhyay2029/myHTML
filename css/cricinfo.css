@@ -1,0 +1,54 @@
+
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #0d6efd !important;
+}
+.hero-section {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 30px auto;
+}
+.player-card {
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+.stats-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stats-box h3 {
+    color: #0d6efd;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.stats-box p {
+    font-size: 16px;
+    color: #555;
+}
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
